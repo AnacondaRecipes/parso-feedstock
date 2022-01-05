@@ -17,8 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
+    - setuptools
+    - wheel
   run:
     - python >=3.6
 
@@ -27,6 +29,11 @@ test:
     - parso
     - parso.pgen2
     - parso.python
+  requires:
+    - pip
+    - python <3.10
+  commands:
+    - pip check
 
 about:
   home: https://github.com/davidhalter/parso

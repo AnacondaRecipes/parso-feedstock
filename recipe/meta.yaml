@@ -11,7 +11,6 @@ source:
   sha256: eb3a7b58240fb99099a345571deecc0f9540ea5f4dd2fe14c2a99d6b281ab92d
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,7 +21,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - python >=3.6
+    - python
 
 test:
   imports:
@@ -31,7 +30,7 @@ test:
     - parso.python
   requires:
     - pip
-    - python <3.10
+    - python
   commands:
     - pip check
 

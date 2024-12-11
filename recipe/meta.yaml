@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -24,15 +24,18 @@ requirements:
     - python
 
 test:
+  source_files:
+    - test
   imports:
     - parso
     - parso.pgen2
     - parso.python
   requires:
     - pip
-    - python
+    - pytest
   commands:
     - pip check
+    - pytest -v --fixtures test
 
 about:
   home: https://github.com/davidhalter/parso

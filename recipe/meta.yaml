@@ -40,8 +40,8 @@ test:
 about:
   home: https://github.com/davidhalter/parso
   license: MIT
-license: MIT AND PSF
-license_family: OTHER
+  license: MIT AND PSF
+  license_family: OTHER
   license_file: LICENSE.txt
   summary: A Python Parser
   description: |

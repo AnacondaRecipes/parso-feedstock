@@ -1,13 +1,13 @@
 {% set name = "parso" %}
-{% set version = "0.8.5" %}
+{% set version = "0.8.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 034d7354a9a018bdce352f48b2a8a450f05e9d6ee85db84764e9b6bd96dafe5a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: eaaac4c9fdd5e9e8852dc778d2d7405897ec510f2a298071453e5e3a07914bb1
 
 build:
   number: 0
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python
     - pip
+    - python
     - setuptools
     - wheel
   run:
